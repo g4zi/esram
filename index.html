@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -34,10 +35,20 @@
 
   <title>esram</title>
   <link rel="manifest" href="manifest.json">
+  <script>
+    async function download() {
+      var pdfAsDataUri = "data:application/pdf;base64, " + pdfData;
+      var link = document.createElement('a');
+      link.download = filename;
+      link.href = pdfAsDataUri;
+      link.type = 'application/pdf';
+      link.click();
+    }
+  </script>
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1170590278";
+    const serviceWorkerVersion = "2812312614";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
